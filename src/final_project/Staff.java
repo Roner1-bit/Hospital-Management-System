@@ -36,23 +36,12 @@ public class Staff extends DB{
     }
     
     
-     public void update(String tabel, int ids,  String target, String new_bal) throws ClassNotFoundException, SQLException{
-
-        tabel = secure_inputs(tabel);
-        target =  secure_inputs(target);
-        new_bal = secure_inputs(new_bal);
-
-        connect();
-        String qry = "UPDATE `"+tabel+"` SET `"+target+"`='"+new_bal+"' WHERE `IDs`='"+ids+"'";
-        getStatement().executeUpdate(qry);
-    }
      
      
      
-    public void Search(String tabel, String id) throws ClassNotFoundException, SQLException {
-        connect();
-        String qry = "SELECT * FROM `"+secure_inputs(tabel)+"` WHERE `IDs`='"+secure_inputs(id)+"'";
-        ResultSet res = getStatement().executeQuery(qry);
+    public void printStaff(String tabel, String id) throws ClassNotFoundException, SQLException {
+       
+        ResultSet res =Select("staff", "IDs", id);
         while(res.next()){
             System.out.println("id: "+res.getInt("IDs")+"  Name: "+res.getString("Names")
                     +" Age: "+res.getInt("Age")+ " Jop: "+res.getString("Jop")+  " Department: "+res.getString("Department")+  " Sex: "+res.getString("Sex")+" Address: "+res.getString("Address")+

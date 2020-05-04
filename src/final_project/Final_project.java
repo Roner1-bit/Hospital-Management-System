@@ -9,18 +9,21 @@ import java.sql.*;
 public class Final_project {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-
-        //Test BloodBank
-        BloodBank b= new BloodBank();
-    //  b.DrawBloodBags("A+",3);
-// b.UpdateBags("A+", 0);
- b.AddBloodDonation("Moas", "1", "Male", "alse@gmail.com", "01100531517", 1, "A-", "daas");
-        //  Test for patients
-        //       Patients pt = new Patients();
-//            pt.Add("patients", "Mosalah",22,"Male", "Cairo","Mosalah.fuck@gmail.com","Tonsillectomy" ,"in");
-//        pt.Search("patients", "1");
-//            pt.update("patients",1,"Age","21");
-//            pt.delete("patients", "19");
+    
+        //      BloodTest 
+            BloodTest t = new BloodTest();
+            System.out.println(t.GetResult("19", "PatientID"));
+//    Test BloodBank
+        //    BloodBank b= new BloodBank();
+        //    b.DrawBloodBags("A+",3);
+        //    b.UpdateBags("A+", 0);
+        //    b.AddBloodDonation("Moas", "1", "Male", "alse@gmail.com", "01100531517", 1, "A-", "daas");
+        //    Test for patients
+        //    Patients pt = new Patients();
+        //    pt.Add("patients", "Mosalah",22,"Male", "Cairo","Mosalah.fuck@gmail.com","Tonsillectomy" ,"in");
+        //    pt.Search("patients", "1");
+        //    pt.update("patients",1,"Age","21");
+        //    pt.delete("patients", "19");
         //  Test for  staff
 //        Staff st = new Staff();
 //            st.Add("Staff","Mosalah",21,"Doctor","Surgery","male","cairo","Mosalah@gmail.com",50000.0);
@@ -29,10 +32,10 @@ public class Final_project {
 //            st.Search("Staff","555");
 //            st.delete("Staff", "557");
         //Test For Pharmcy 
-//        Pharmcy Ph = new Pharmcy();
+        //      Pharmcy Ph = new Pharmcy();
 //            Ph.Add("Pharmcy","Augmentin", "Antibiotic", "Birzeit", 100, "20/5/2025");
 //            Ph.Add("Pharmcy","Lantus", "Diabetes", " Sanofi-Aventis", 50, "30/8/2023");
-        //       Ph.SearchByName("Pharmcy", "Augmentin");
+//              Ph.SearchByName("Pharmcy", "5162318","Barcode");
 //            Ph.SearchByCode("Pharmcy", "5162319");
 //            Ph.Update("Pharmcy", 5162318, "Amounts", "100");
 //            Ph.delete("Pharmcy", "5162320");
